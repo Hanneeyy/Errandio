@@ -628,6 +628,35 @@
   .why-list h4{ font-size: 1.05rem; margin-bottom:4px; }
   .why-list p{ color: var(--ink-soft); font-size:0.92rem; }
 
+  /* ---------- FORMS SECTION ---------- */
+  .forms-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .form-card{
+    background: var(--paper);
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 44px 36px;
+    text-align:center;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .form-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(21,65,114,0.1);
+    border-color: var(--navy);
+  }
+  .form-card h3{
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+  }
+  .form-card p{
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+
   /* ---------- WAITLIST ---------- */
   .waitlist{
     background: var(--orange);
@@ -709,6 +738,26 @@
   .footer-col ul{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; }
   .footer-col a{ color: var(--ink-soft); font-size: 0.9rem; transition: color .2s ease; }
   .footer-col a:hover{ color: var(--orange); }
+  .footer-social{
+    display:flex;
+    gap: 16px;
+    margin-top: 12px;
+  }
+  .footer-social a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--orange-soft);
+    color: var(--orange);
+    transition: background .2s ease, color .2s ease;
+  }
+  .footer-social a:hover{
+    background: var(--orange);
+    color: white;
+  }
   .footer-bottom{
     display:flex;
     justify-content:space-between;
@@ -730,6 +779,7 @@
     .features-grid{ grid-template-columns: 1fr 1fr; }
     .pricing-inner{ grid-template-columns: 1fr; }
     .why{ grid-template-columns: 1fr; }
+    .forms-grid{ grid-template-columns: 1fr; }
     .footer-top{ grid-template-columns: 1fr; gap: 28px; }
   }
 
@@ -813,7 +863,7 @@
           <div class="phone-topbar"><span>Post an errand</span><span>9:41</span></div>
           <div class="phone-card">
             <small>Errand type</small>
-            <strong>Print 20 pages — Rizal Bldg</strong>
+            <strong>Print 20 pages — Finster Building</strong>
             <span class="phone-badge">Tier 1 · Same building</span>
           </div>
           <div class="phone-card">
@@ -959,7 +1009,7 @@
         </div>
         <div class="tier tier-mid">
           <span class="tier-tag">Most common</span>
-          <h4>Tier 2</h4>
+          <h4 style="color: white;">Tier 2</h4>
           <p class="tier-desc">Cross-campus</p>
           <div class="price">₱25</div>
         </div>
@@ -1013,6 +1063,29 @@
   </div>
 </section>
 
+<!-- FORMS SECTION -->
+<section id="forms">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Ready to join us?</span>
+      <h2>Pick your role and get started.</h2>
+      <p>Whether you need errands done or want to earn by helping classmates, there's a spot for you in the Errandio community.</p>
+    </div>
+    <div class="forms-grid reveal">
+      <div class="form-card">
+        <h3>Want to be a Runner?</h3>
+        <p>Sign up to accept errands, earn money, and make campus life easier for your classmates during your free periods.</p>
+        <a href="https://forms.gle/jjsfqiFEtaNk7ogM7" target="_blank" rel="noopener" class="btn btn-primary">Join as a Runner</a>
+      </div>
+      <div class="form-card">
+        <h3>Want to Request an Errand?</h3>
+        <p>Post your task, get it done by a verified classmate, and free up your schedule for what matters most.</p>
+        <a href="https://forms.gle/ZZDQmZpTDqEzWv1Y8" target="_blank" rel="noopener" class="btn btn-primary">Request an Errand</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- WAITLIST -->
 <section id="waitlist">
   <div class="wrap">
@@ -1033,6 +1106,10 @@
       <div class="footer-brand">
         <div class="logo"><span class="logo-mark"></span>Errandio</div>
         <p>Campus errands, run by fellow students. One campus, one community, more things done.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/p/Errandio-61593733182407/" target="_blank" rel="noopener" title="Follow us on Facebook">f</a>
+          <a href="mailto:errandio.service@gmail.com" title="Email us">✉</a>
+        </div>
       </div>
       <div class="footer-col">
         <h5>Explore</h5>
@@ -1047,13 +1124,13 @@
         <h5>Get in touch</h5>
         <ul>
           <li><a href="#waitlist">Join the waitlist</a></li>
-          <li><a href="#">Message us on Facebook</a></li>
-          <li><a href="#">Ateneo de Davao University</a></li>
+          <li><a href="#forms">Join as a Runner or Requester</a></li>
+          <li><a href="https://www.facebook.com/p/Errandio-61593733182407/" target="_blank" rel="noopener">Message us on Facebook</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>Skip the walk. Skip the wait.</span>
+      <span>Built by students. Made for students.</span>
       <span>A Technopreneurship project by Cabrera, Managbanag &amp; Medellin — IT 3A</span>
     </div>
   </div>
